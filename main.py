@@ -1,12 +1,13 @@
 import requests, os, time, logging, re, random
 from bs4 import BeautifulSoup
 
+##注意替换 payload 中的用户名和密码 ##
 
 def login(host):
     url = host + "member.php"
     querystring = {"mod": "logging", "action": "login", "loginsubmit": "yes", "infloat": "yes", "lssubmit": "yes",
                    "inajax": "1"}
-    payload = "fastloginfield=username&username=sky367&cookietime=2592000&password=ys3670825&quickforward=yes" \
+    payload = "fastloginfield=username&username=这里替换用户名&cookietime=2592000&password=这里替换密码&quickforward=yes" \
               "&handlekey=ls "
     headers = {
         'content-type': "application/x-www-form-urlencoded",
